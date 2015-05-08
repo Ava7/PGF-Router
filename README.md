@@ -34,7 +34,7 @@ If a route is found an array is returned. Structure is:
         [route] => /user/{id} // registered route
         [method] => get // route method
         [action] => UserController@show // action for this route 
-        [params] => Array // route parameters with there names and values. Order is same ad declaration.
+        [params] => Array // route parameters with there names and values. Order is same as they are found in route.
         (
             [id] => 1
         )
@@ -71,7 +71,7 @@ Using optional parameters can cause some issues. For example:
 If request URL is **/123** then **HomeController@show** will be returned.
 
 #### Performance
-Tests are executed using Apache Benchmark and show request/second:
+Tests are executed using Apache Benchmark and show requests/second:
     
     ab -n 10000 -c 50
 
@@ -83,8 +83,8 @@ Tests are executed using Apache Benchmark and show request/second:
 30 routes (not found) | 9200 | 6600
 100 routes (found) | 4900 | 2800
 100 routes (not found) | 4800 | 2700
-100 routes (cached found) | 10800 | ---
-100 routes (cached not found) | 9900 | ---
+100 routes (cached - found) | 10800 | ---
+100 routes (cached - not found) | 9900 | ---
 As you can see from results this implementation is slightly faster than alternatives. When the tree structure is cached searching is really fast.
 
 #### Issues
@@ -92,3 +92,4 @@ As you can see from results this implementation is slightly faster than alternat
 - Reverse process of generating URL from route and parameters is not implemented.
 - In some corner cases optional parameters may not work as you expect, but behavior is constant between requests.
 - Code coverage is not enough.
+- 
