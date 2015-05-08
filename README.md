@@ -92,4 +92,3 @@ As you can see from results this implementation is slightly faster than alternat
 - Reverse process of generating URL from route and parameters is not implemented.
 - In some corner cases optional parameters may not work as you expect, but behavior is constant between requests.
 - Code coverage is not enough.
-- 
