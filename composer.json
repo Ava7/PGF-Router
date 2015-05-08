@@ -1,0 +1,27 @@
+{
+  "name": "pgf/router",
+  "description": "Fast request router for PHP",
+  "keywords": [
+    "router",
+    "pgf"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ivan Vankov (gatakka)",
+      "email": "gatakka@gatakka.eu"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "ext-mbstring": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "PGF\\": "src/PGF"
+    }
+  }
+}
