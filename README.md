@@ -40,8 +40,8 @@ If a route is found an array is returned. Structure is:
         )
     )
  
-#### Cashing
-Because internal structure is plain multidimensional array, cashing is very easy and effective. Data for cashing can be obtain using:
+#### Caching
+Because internal structure is plain multidimensional array, caching is very easy and effective. Data for caching can be obtain using:
 	
     $router->dump();
 
