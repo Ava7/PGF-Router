@@ -71,7 +71,7 @@ Using optional parameters can cause some issues. For example:
 If request URL is **/123** then **HomeController@show** will be returned.
 
 #### Performance
-Tests are executed using Apache Benchmark:
+Tests are executed using Apache Benchmark and show request/second:
     
     ab -n 10000 -c 50
 
