@@ -77,12 +77,12 @@ Tests are executed using Apache Benchmark and show requests/second:
 
  | PGF/Router | nikic/fast-route
 --- | --- | ---
-1 route (found) | 16400 | 13300
-1 route (not found) | 14400 | 13700
-30 routes (found) | 9400 | 6800
-30 routes (not found) | 9200 | 6600
-100 routes (found) | 4900 | 2800
-100 routes (not found) | 4800 | 2700
+1 route (not cached - found) | 16400 | 13300
+1 route (not cached - not found) | 14400 | 13700
+30 routes (not cached - found) | 9400 | 6800
+30 routes (not cached - not found) | 9200 | 6600
+100 routes (not cached - found) | 4900 | 2800
+100 routes (not cached - not found) | 4800 | 2700
 100 routes (cached - found) | 10800 | ---
 100 routes (cached - not found) | 9900 | ---
 As you can see from results this implementation is slightly faster than alternatives. When the tree structure is cached searching is really fast.
