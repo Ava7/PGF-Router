@@ -1,6 +1,6 @@
 PGF/Router - Fast request router for PHP
 =======================================
-This library does not use regular expressions, instead routes are converted in tree-like structure (it is a native multi dimensional array). So later searches are very effective because complexity is related to the count of request URL segments not to number of added routes. Building the tree is an expensive task but structure can be cashed very effectively. See simple benchmark below.
+This library does not use regular expressions, instead routes are converted in tree-like structure (it is a native multi dimensional array). So later searches are very effective because complexity is related to the count of request URL segments not to number of added routes. Building the tree is an expensive task but structure can be cached very effectively. See simple benchmark below.
 
 Usage
 -----
@@ -47,7 +47,7 @@ Because internal structure is plain multidimensional array, caching is very easy
 
 And can be loaded using:
 
-	$router->load($cashedArray);
+	$router->load($cachedArray);
     
 Using **load()** method will overwrite any previously added routes. If you load data adding routes using **addRoute()** is not necessary
 
